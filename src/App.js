@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import Increment from './components/Increment.js';
-import Decrement from './components/Decrement.js';
+import CounterButton from './components/CounterButton.js';
 
 function App() {
 
@@ -22,9 +21,9 @@ function App() {
         <input value={counter} disabled></input><br/>
         <div style={{display:'flex'}}>
 
-        <Increment handleInc={handleInc} />
-        <Decrement handleInc={handleDec} />
-        
+        <CounterButton type="increase" method={handleInc} />
+        <CounterButton type="decrease" method={handleDec} />
+
         </div>
         
       </div>
